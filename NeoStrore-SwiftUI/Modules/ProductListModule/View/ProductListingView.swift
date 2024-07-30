@@ -17,7 +17,7 @@ struct ProductListingView: View {
         GeometryReader{ geometry in
             List(productListingViewModel.product){item in
                 NavigationLink(destination: ProductDetailView(currentPhoto: "MockFurniture", isShowingBuyView: false)) {
-                    ProductListCellView()
+                    ProductListCellView(thumbnail: item.productImages, name: item.name, category: item.producer, price: "\(item.cost)")
                         .frame(height: geometry.size.height/8)
                 }
             }.listStyle(.plain)
