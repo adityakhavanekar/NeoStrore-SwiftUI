@@ -11,6 +11,7 @@ struct ProductDetailView: View {
     
     @State var currentPhoto:String
     @State var isShowingBuyView:Bool
+    var productId: Int = 1
     
     var body: some View {
         ZStack{

@@ -29,6 +29,8 @@
 		0A331A922C313D050063CB1F /* ProductListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A331A912C313D050063CB1F /* ProductListCellView.swift */; };
 		0A331A982C3282850063CB1F /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A331A972C3282850063CB1F /* ProductDetailView.swift */; };
 		0A331A9E2C3500E00063CB1F /* ProductBuyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A331A9D2C3500E00063CB1F /* ProductBuyView.swift */; };
+		0A334B862C5961ED0044EFCE /* ProductDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A334B852C5961ED0044EFCE /* ProductDetailModel.swift */; };
+		0A334B882C59624C0044EFCE /* ProductDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A334B872C59624C0044EFCE /* ProductDetailViewModel.swift */; };
 		0A3841A92C353ADD0077B501 /* MyCartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3841A82C353ADD0077B501 /* MyCartView.swift */; };
 		0A3841AD2C353B0B0077B501 /* MyCartListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3841AC2C353B0B0077B501 /* MyCartListCell.swift */; };
 		0A3841B32C35497E0077B501 /* AddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3841B22C35497E0077B501 /* AddressView.swift */; };
@@ -87,6 +89,8 @@
 		0A331A912C313D050063CB1F /* ProductListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListCellView.swift; sourceTree = "<group>"; };
 		0A331A972C3282850063CB1F /* ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
 		0A331A9D2C3500E00063CB1F /* ProductBuyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductBuyView.swift; sourceTree = "<group>"; };
+		0A334B852C5961ED0044EFCE /* ProductDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailModel.swift; sourceTree = "<group>"; };
+		0A334B872C59624C0044EFCE /* ProductDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewModel.swift; sourceTree = "<group>"; };
 		0A3841A82C353ADD0077B501 /* MyCartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCartView.swift; sourceTree = "<group>"; };
 		0A3841AC2C353B0B0077B501 /* MyCartListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCartListCell.swift; sourceTree = "<group>"; };
 		0A3841B22C35497E0077B501 /* AddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressView.swift; sourceTree = "<group>"; };
@@ -415,6 +419,7 @@
 		0A331A952C32826F0063CB1F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				0A334B872C59624C0044EFCE /* ProductDetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -422,6 +427,7 @@
 		0A331A962C3282740063CB1F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0A334B852C5961ED0044EFCE /* ProductDetailModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -721,6 +727,7 @@
 				0A331A412C2E9B180063CB1F /* Persistence.swift in Sources */,
 				0A331A702C2EA6F50063CB1F /* ImageTextField.swift in Sources */,
 				0A331A802C2FC8B10063CB1F /* HomeView.swift in Sources */,
+				0A334B862C5961ED0044EFCE /* ProductDetailModel.swift in Sources */,
 				0A331A892C3130A70063CB1F /* HomeFurnitureCellView.swift in Sources */,
 				0A3841A92C353ADD0077B501 /* MyCartView.swift in Sources */,
 				0A331A442C2E9B180063CB1F /* NeoStrore_SwiftUI.xcdatamodeld in Sources */,
@@ -733,6 +740,7 @@
 				0A331A3A2C2E9B170063CB1F /* ContentView.swift in Sources */,
 				0A331A6D2C2E9D4F0063CB1F /* LoginView.swift in Sources */,
 				0A331A782C2EBC8A0063CB1F /* RegisterView.swift in Sources */,
+				0A334B882C59624C0044EFCE /* ProductDetailViewModel.swift in Sources */,
 				0A94679E2C3D14DC00777FE9 /* LoginViewModel.swift in Sources */,
 				0A331A8F2C313C9A0063CB1F /* ProductListingView.swift in Sources */,
 				0A3841B52C3A9FCC0077B501 /* AddressTextFields.swift in Sources */,

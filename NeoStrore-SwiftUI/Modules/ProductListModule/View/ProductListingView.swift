@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ProductListingView: View {
     
-    var productId:Int = 1
+    var productCategoryId:Int = 1
     
     @StateObject var productListingViewModel:ProductListingViewModel = ProductListingViewModel()
     
@@ -22,7 +22,7 @@ struct ProductListingView: View {
                 }
             }.listStyle(.plain)
         }.onAppear(){
-            productListingViewModel.getProductListing(productCategoryId: productId) { bool in
+            productListingViewModel.getProductListing(productCategoryId: productCategoryId) { bool in
                 print(bool)
             }
         }
@@ -30,5 +30,5 @@ struct ProductListingView: View {
 }
 
 #Preview {
-    ProductListingView(productId: 1)
+    ProductListingView(productCategoryId: 1)
 }

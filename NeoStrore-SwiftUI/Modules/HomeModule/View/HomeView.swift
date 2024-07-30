@@ -39,7 +39,7 @@ struct HomeView: View {
                             GridItem(.fixed(geometry.size.width/2.1)),
                             GridItem(.fixed(geometry.size.width/2.1))]){
                                 ForEach(0..<categories.count){category in
-                                    NavigationLink(destination: ProductListingView(productId: category+1)){
+                                    NavigationLink(destination: ProductListingView(productCategoryId: category+1)){
                                         HomeFurnitureCellView(category: "\(categories[category])")
                                             .frame(width: geometry.size.width/2.1,height: geometry.size.height/2)
                                             .background(Color.red)
