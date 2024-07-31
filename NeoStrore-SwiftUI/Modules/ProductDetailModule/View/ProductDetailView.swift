@@ -60,27 +60,6 @@ struct ProductDetailView: View {
                                 }
                             }
                             
-//                            HStack{
-//                                WebImage(url: URL(string: productDetailViewModel.product?.data.productImages[0].image ?? ""))
-//                                    .resizable()
-//                                    .frame(width: geometry.size.width/3.5,height: 100)
-//                                    .onTapGesture {
-//                                        currentPhoto = "MockFurniture"
-//                                    }
-//                                WebImage(url: URL(string: productDetailViewModel.product?.data.productImages[1].image ?? ""))
-//                                    .resizable()
-//                                    .frame(width: geometry.size.width/3.5,height: 100)
-//                                    .onTapGesture {
-//                                        currentPhoto = "email"
-//                                    }
-//                                WebImage(url: URL(string: productDetailViewModel.product?.data.productImages[1].image ?? ""))
-//                                    .resizable()
-//                                    .frame(width: geometry.size.width/3.5,height: 100)
-//                                    .onTapGesture {
-//                                        currentPhoto = "padlock"
-//                                    }
-//                            }
-                            
                             VStack{
                                 Text(productDetailViewModel.product?.data.description ?? "")
                             }
