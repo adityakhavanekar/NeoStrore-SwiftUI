@@ -16,7 +16,7 @@ struct ProductListingView: View {
     var body: some View {
         GeometryReader{ geometry in
             List(productListingViewModel.product){item in
-                NavigationLink(destination: ProductDetailView(currentPhoto: "MockFurniture", isShowingBuyView: false)) {
+                NavigationLink(destination: ProductDetailView(isShowingBuyView: false, productId:item.id)) {
                     ProductListCellView(thumbnail: item.productImages, name: item.name, category: item.producer, price: "\(item.cost)")
                         .frame(height: geometry.size.height/8)
                 }

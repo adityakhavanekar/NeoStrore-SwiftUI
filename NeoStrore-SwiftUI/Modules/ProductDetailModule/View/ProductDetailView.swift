@@ -6,11 +6,14 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct ProductDetailView: View {
     
-    @State var currentPhoto:String
+    @State var currentPhoto:String = ""
     @State var isShowingBuyView:Bool
+    @StateObject var productDetailViewModel:ProductDetailViewModel = ProductDetailViewModel()
+    
     var productId: Int = 1
     
     var body: some View {
@@ -20,12 +23,12 @@ struct ProductDetailView: View {
                 ScrollView{
                     VStack(alignment:.leading){
                         VStack(alignment: .leading){
-                            Text("6 Seater Family Dining table")
+                            Text(productDetailViewModel.product?.data.name ?? "")
                                 .font(.headline)
-                            Text("Category - Tables")
+                            Text(productDetailViewModel.product?.data.producer ?? "")
                                 .font(.subheadline)
                                 .foregroundColor(.secondary)
-                            Text("Future Furniture Center")
+                            Text(productDetailViewModel.product?.data.description ?? "")
                                 .font(.caption)
                                 .foregroundColor(.secondary)
                         }
@@ -34,28 +37,28 @@ struct ProductDetailView: View {
                         .background(Color.white)
                         
                         VStack(alignment:.leading){
-                            Text("Rs 27,520")
+                            Text("Rs \(productDetailViewModel.product?.data.cost ?? 0)")
                                 .fontWeight(.bold)
                                 .foregroundColor(Color.red)
                                 .font(.system(size: 20))
-                            Image(currentPhoto)
+                            WebImage(url: URL(string:currentPhoto))
                                 .resizable()
                                 .frame(height: 200)
                             
                             HStack{
-                                Image("MockFurniture")
+                                WebImage(url: URL(string: productDetailViewModel.product?.data.productImages[0].image ?? ""))
                                     .resizable()
                                     .frame(width: geometry.size.width/3.5,height: 100)
                                     .onTapGesture {
                                         currentPhoto = "MockFurniture"
                                     }
-                                Image("email")
+                                WebImage(url: URL(string: productDetailViewModel.product?.data.productImages[1].image ?? ""))
                                     .resizable()
                                     .frame(width: geometry.size.width/3.5,height: 100)
                                     .onTapGesture {
                                         currentPhoto = "email"
                                     }
-                                Image("padlock")
+                                WebImage(url: URL(string: productDetailViewModel.product?.data.productImages[1].image ?? ""))
                                     .resizable()
                                     .frame(width: geometry.size.width/3.5,height: 100)
                                     .onTapGesture {
@@ -64,7 +67,7 @@ struct ProductDetailView: View {
                             }
                             
                             VStack{
-                                Text("There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.")
+                                Text(productDetailViewModel.product?.data.description ?? "")
                             }
                         }
                         .padding()
@@ -110,6 +113,10 @@ struct ProductDetailView: View {
                     }
                 ProductBuyView(isShowingBuyView: $isShowingBuyView)
                     
+            }
+        }.onAppear(){
+            productDetailViewModel.getProductDetail(productId: productId) { bool in
+                print(bool)
             }
         }
     }

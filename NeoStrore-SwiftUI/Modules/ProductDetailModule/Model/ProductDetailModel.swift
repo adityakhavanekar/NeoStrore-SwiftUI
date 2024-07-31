@@ -34,7 +34,7 @@ struct ProductDataClass: Codable {
 struct ProductImage: Codable {
     let id, productID: Int
     let image: String
-    let created, modified: Date
+    let created, modified: String
     
     enum CodingKeys: String, CodingKey {
         case id

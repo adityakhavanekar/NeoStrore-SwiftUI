@@ -9,17 +9,17 @@ import Foundation
 
 final class ProductDetailViewModel:ObservableObject{
     
-    @Published var product: [ProductListingData] = []
+    @Published var product: ProductDetailModel?
     
-    func getProductListing(productCategoryId:Int,completion:@escaping (Bool)->()){
-        NetworkManager.shared.request(url: URL(string: "http://staging.php-dev.in:8844/trainingapp/api/products/getList?product_category_id=\(productCategoryId)")!){
+    func getProductDetail(productId:Int,completion:@escaping (Bool)->()){
+        NetworkManager.shared.request(url: URL(string: "http://staging.php-dev.in:8844/trainingapp/api/products/getDetail?product_id=\(productId)")!){
             result in
             switch result{
             case .success(let data):
                 do {
-                    let json = try JSONDecoder().decode(ProductListingModel.self, from: data)
+                    let json = try JSONDecoder().decode(ProductDetailModel.self, from: data)
                     DispatchQueue.main.async{
-                        self.product = json.data
+                        self.product = json
                     }
                     print(json)
                 }catch{
