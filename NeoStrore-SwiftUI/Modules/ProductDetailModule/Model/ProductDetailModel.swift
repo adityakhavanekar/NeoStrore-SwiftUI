@@ -31,7 +31,7 @@ struct ProductDataClass: Codable {
 }
 
 // MARK: - ProductImage
-struct ProductImage: Codable {
+struct ProductImage: Codable, Identifiable {
     let id, productID: Int
     let image: String
     let created, modified: String

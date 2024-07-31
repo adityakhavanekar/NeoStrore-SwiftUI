@@ -45,26 +45,41 @@ struct ProductDetailView: View {
                                 .resizable()
                                 .frame(height: 200)
                             
-                            HStack{
-                                WebImage(url: URL(string: productDetailViewModel.product?.data.productImages[0].image ?? ""))
-                                    .resizable()
-                                    .frame(width: geometry.size.width/3.5,height: 100)
-                                    .onTapGesture {
-                                        currentPhoto = "MockFurniture"
+                            ScrollView(.horizontal){
+                                HStack{
+                                    if let images = productDetailViewModel.product?.data.productImages{
+                                        ForEach(images){ image in
+                                            WebImage(url: URL(string: image.image))
+                                                .resizable()
+                                                .frame(width: geometry.size.width/3.5,height: 100)
+                                                .onTapGesture {
+                                                    currentPhoto = image.image
+                                                }
+                                        }
                                     }
-                                WebImage(url: URL(string: productDetailViewModel.product?.data.productImages[1].image ?? ""))
-                                    .resizable()
-                                    .frame(width: geometry.size.width/3.5,height: 100)
-                                    .onTapGesture {
-                                        currentPhoto = "email"
-                                    }
-                                WebImage(url: URL(string: productDetailViewModel.product?.data.productImages[1].image ?? ""))
-                                    .resizable()
-                                    .frame(width: geometry.size.width/3.5,height: 100)
-                                    .onTapGesture {
-                                        currentPhoto = "padlock"
-                                    }
+                                }
                             }
+                            
+//                            HStack{
+//                                WebImage(url: URL(string: productDetailViewModel.product?.data.productImages[0].image ?? ""))
+//                                    .resizable()
+//                                    .frame(width: geometry.size.width/3.5,height: 100)
+//                                    .onTapGesture {
+//                                        currentPhoto = "MockFurniture"
+//                                    }
+//                                WebImage(url: URL(string: productDetailViewModel.product?.data.productImages[1].image ?? ""))
+//                                    .resizable()
+//                                    .frame(width: geometry.size.width/3.5,height: 100)
+//                                    .onTapGesture {
+//                                        currentPhoto = "email"
+//                                    }
+//                                WebImage(url: URL(string: productDetailViewModel.product?.data.productImages[1].image ?? ""))
+//                                    .resizable()
+//                                    .frame(width: geometry.size.width/3.5,height: 100)
+//                                    .onTapGesture {
+//                                        currentPhoto = "padlock"
+//                                    }
+//                            }
                             
                             VStack{
                                 Text(productDetailViewModel.product?.data.description ?? "")
@@ -116,7 +131,14 @@ struct ProductDetailView: View {
             }
         }.onAppear(){
             productDetailViewModel.getProductDetail(productId: productId) { bool in
-                print(bool)
+                switch bool{
+                case true:
+                    if let photo = productDetailViewModel.product?.data.productImages[0].image{
+                        currentPhoto = photo
+                    }
+                case false:
+                    print("Error")
+                }
             }
         }
     }

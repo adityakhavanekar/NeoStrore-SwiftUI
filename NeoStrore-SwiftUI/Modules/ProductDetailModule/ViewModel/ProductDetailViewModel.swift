@@ -21,6 +21,7 @@ final class ProductDetailViewModel:ObservableObject{
                     DispatchQueue.main.async{
                         self.product = json
                     }
+                    completion(true)
                     print(json)
                 }catch{
                     print("Failed to decode JSON: \(error)")
