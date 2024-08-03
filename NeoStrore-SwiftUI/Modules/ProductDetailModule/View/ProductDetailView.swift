@@ -10,7 +10,7 @@ import SDWebImageSwiftUI
 
 struct ProductDetailView: View {
     
-    @State var currentPhoto:String = ""
+    @State var currentPhoto:String
     @State var isShowingBuyView:Bool
     @StateObject var productDetailViewModel:ProductDetailViewModel = ProductDetailViewModel()
     
@@ -59,7 +59,6 @@ struct ProductDetailView: View {
                                     }
                                 }
                             }
-                            
                             VStack{
                                 Text(productDetailViewModel.product?.data.description ?? "")
                             }
