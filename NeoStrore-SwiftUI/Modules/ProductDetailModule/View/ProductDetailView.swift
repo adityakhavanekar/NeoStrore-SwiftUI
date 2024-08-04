@@ -104,8 +104,12 @@ struct ProductDetailView: View {
                     .onTapGesture {
                         isShowingBuyView = false
                     }
-                if let productId = productDetailViewModel.product?.data.id{
-                    ProductBuyView(productId: "\(productId)", isShowingBuyView: $isShowingBuyView)
+                if let productId = productDetailViewModel.product?.data.id,let images = productDetailViewModel.product?.data.productImages{
+                    if images.isEmpty{
+                        
+                    }else{
+                        ProductBuyView(productId: "\(productId)", image: images[0].image, isShowingBuyView: $isShowingBuyView)
+                    }
                 }
                 
                     

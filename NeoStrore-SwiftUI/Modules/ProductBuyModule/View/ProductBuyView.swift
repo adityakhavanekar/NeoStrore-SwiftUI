@@ -6,12 +6,14 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct ProductBuyView: View {
     
     var productId:String
     @State var quantity:String = ""
     @State var isShowingError:Bool = false
+    @State var image:String
     @Binding var isShowingBuyView:Bool
     @StateObject var productBuyViewModel:ProductBuyViewModel = ProductBuyViewModel()
     
@@ -21,7 +23,7 @@ struct ProductBuyView: View {
                 .font(.title2)
                 .fontWeight(.bold)
                 .padding()
-            Image("MockFurniture")
+            WebImage(url: URL(string: image))
                 .resizable()
                 .frame(width: 250,height: 250)
                 .padding(.bottom,20)
@@ -56,5 +58,5 @@ struct ProductBuyView: View {
 }
 
 #Preview {
-    ProductBuyView(productId: "1", isShowingBuyView: .constant(false))
+    ProductBuyView(productId: "1", image: "MockFurniture", isShowingBuyView: .constant(false))
 }
