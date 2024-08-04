@@ -6,9 +6,11 @@
 //
 
 import Foundation
+import SwiftUI
 
 final class LoginViewModel:ObservableObject{
     
+    @AppStorage ("accessToken") private var accessToken:String?
     @Published var model: LoginResponseModel?
     @Published var navigateToHome : Bool = false
     
@@ -23,6 +25,7 @@ final class LoginViewModel:ObservableObject{
                         self.model = json
                         if self.model?.status == 200{
                             self.navigateToHome = true
+                            self.accessToken = json.data.accessToken
                         }else{
                             self.navigateToHome = false
                         }

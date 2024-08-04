@@ -9,8 +9,11 @@ import SwiftUI
 
 struct ProductBuyView: View {
     
+    var productId:String
     @State var quantity:String = ""
+    @State var isShowingError:Bool = false
     @Binding var isShowingBuyView:Bool
+    @StateObject var productBuyViewModel:ProductBuyViewModel = ProductBuyViewModel()
     
     var body: some View {
         VStack(alignment:.center){
@@ -30,7 +33,15 @@ struct ProductBuyView: View {
                 .padding(10)
                 .border(.black)
                 .padding(.bottom,20)
-            Button{}label: {
+            Button{
+                if let quantity = Int(quantity) , let productId = Int(productId){
+                    productBuyViewModel.buyProduct(productId: productId, quantity: Int(quantity)) { bool in
+                        print(bool)
+                    }
+                }else{
+                    isShowingError = true
+                }
+            }label: {
                 NeoButton(buttonText: "SUBMIT", foregroundColor: .white, backgroundColor: .red)
                     .padding(.bottom,20)
             }
@@ -38,9 +49,12 @@ struct ProductBuyView: View {
         .frame(width: 350)
         .background(Color.white)
         .cornerRadius(10)
+        .alert(isPresented: $isShowingError, content: {
+            Alert(title: Text("Error"), message: Text("Enter Quantity"), dismissButton: .default(Text("Try Again"), action: {}))
+        })
     }
 }
 
 #Preview {
-    ProductBuyView(isShowingBuyView: .constant(false))
+    ProductBuyView(productId: "1", isShowingBuyView: .constant(false))
 }

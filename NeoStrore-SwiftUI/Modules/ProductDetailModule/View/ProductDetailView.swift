@@ -104,7 +104,10 @@ struct ProductDetailView: View {
                     .onTapGesture {
                         isShowingBuyView = false
                     }
-                ProductBuyView(isShowingBuyView: $isShowingBuyView)
+                if let productId = productDetailViewModel.product?.data.id{
+                    ProductBuyView(productId: "\(productId)", isShowingBuyView: $isShowingBuyView)
+                }
+                
                     
             }
         }.onAppear(){

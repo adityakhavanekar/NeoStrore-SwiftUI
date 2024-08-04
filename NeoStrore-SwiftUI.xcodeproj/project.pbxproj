@@ -41,6 +41,8 @@
 		0A94679A2C3BF0D800777FE9 /* RegisterResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9467992C3BF0D800777FE9 /* RegisterResponseModel.swift */; };
 		0A94679C2C3D138600777FE9 /* LoginResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A94679B2C3D138600777FE9 /* LoginResponseModel.swift */; };
 		0A94679E2C3D14DC00777FE9 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A94679D2C3D14DC00777FE9 /* LoginViewModel.swift */; };
+		0AD6DF6B2C5EC95200AABFF1 /* ProductBuyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD6DF6A2C5EC95200AABFF1 /* ProductBuyViewModel.swift */; };
+		0AD6DF6D2C5F4B0000AABFF1 /* ProductBuyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD6DF6C2C5F4B0000AABFF1 /* ProductBuyModel.swift */; };
 		0ADDDF432C3BAF0800F5D641 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADDDF422C3BAF0800F5D641 /* RegisterViewModel.swift */; };
 		0AE16ED12C585B95005CFEB6 /* ProductListingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE16ED02C585B95005CFEB6 /* ProductListingModel.swift */; };
 		0AE16ED32C585BC7005CFEB6 /* ProductListingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE16ED22C585BC7005CFEB6 /* ProductListingViewModel.swift */; };
@@ -105,6 +107,8 @@
 		0A9467992C3BF0D800777FE9 /* RegisterResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterResponseModel.swift; sourceTree = "<group>"; };
 		0A94679B2C3D138600777FE9 /* LoginResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponseModel.swift; sourceTree = "<group>"; };
 		0A94679D2C3D14DC00777FE9 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		0AD6DF6A2C5EC95200AABFF1 /* ProductBuyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductBuyViewModel.swift; sourceTree = "<group>"; };
+		0AD6DF6C2C5F4B0000AABFF1 /* ProductBuyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductBuyModel.swift; sourceTree = "<group>"; };
 		0ADDDF422C3BAF0800F5D641 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		0ADDDF442C3BBCD600F5D641 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		0AE16ED02C585B95005CFEB6 /* ProductListingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListingModel.swift; sourceTree = "<group>"; };
@@ -462,6 +466,7 @@
 		0A331A9A2C3500BD0063CB1F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0AD6DF6C2C5F4B0000AABFF1 /* ProductBuyModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -477,6 +482,7 @@
 		0A331A9C2C3500C80063CB1F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				0AD6DF6A2C5EC95200AABFF1 /* ProductBuyViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -893,11 +899,13 @@
 				0A331A412C2E9B180063CB1F /* Persistence.swift in Sources */,
 				0A331A702C2EA6F50063CB1F /* ImageTextField.swift in Sources */,
 				0A331A802C2FC8B10063CB1F /* HomeView.swift in Sources */,
+				0AD6DF6B2C5EC95200AABFF1 /* ProductBuyViewModel.swift in Sources */,
 				0A334B862C5961ED0044EFCE /* ProductDetailModel.swift in Sources */,
 				0A331A892C3130A70063CB1F /* HomeFurnitureCellView.swift in Sources */,
 				0A3841A92C353ADD0077B501 /* MyCartView.swift in Sources */,
 				0A331A442C2E9B180063CB1F /* NeoStrore_SwiftUI.xcdatamodeld in Sources */,
 				0A3841B32C35497E0077B501 /* AddressView.swift in Sources */,
+				0AD6DF6D2C5F4B0000AABFF1 /* ProductBuyModel.swift in Sources */,
 				0A331A862C2FEB1D0063CB1F /* HomeCarasolCellView.swift in Sources */,
 				0A331A832C2FC9450063CB1F /* NavBarView.swift in Sources */,
 				0A73AB402C3ADF310033965F /* NetworkManager.swift in Sources */,
