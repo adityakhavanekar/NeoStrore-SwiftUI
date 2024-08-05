@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A1E9D072C61399300AF918E /* MyCartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1E9D062C61399300AF918E /* MyCartViewModel.swift */; };
+		0A1E9D092C613AC100AF918E /* MyCartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1E9D082C613AC100AF918E /* MyCartModel.swift */; };
 		0A331A382C2E9B170063CB1F /* NeoStrore_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A331A372C2E9B170063CB1F /* NeoStrore_SwiftUIApp.swift */; };
 		0A331A3A2C2E9B170063CB1F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A331A392C2E9B170063CB1F /* ContentView.swift */; };
 		0A331A3C2C2E9B180063CB1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A331A3B2C2E9B180063CB1F /* Assets.xcassets */; };
@@ -70,6 +72,8 @@
 
 /* Begin PBXFileReference section */
 		04EBEFF9DB754499FF49C127 /* Pods-NeoStrore-SwiftUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeoStrore-SwiftUITests.release.xcconfig"; path = "Target Support Files/Pods-NeoStrore-SwiftUITests/Pods-NeoStrore-SwiftUITests.release.xcconfig"; sourceTree = "<group>"; };
+		0A1E9D062C61399300AF918E /* MyCartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCartViewModel.swift; sourceTree = "<group>"; };
+		0A1E9D082C613AC100AF918E /* MyCartModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCartModel.swift; sourceTree = "<group>"; };
 		0A331A342C2E9B170063CB1F /* NeoStrore-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NeoStrore-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A331A372C2E9B170063CB1F /* NeoStrore_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeoStrore_SwiftUIApp.swift; sourceTree = "<group>"; };
 		0A331A392C2E9B170063CB1F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -509,6 +513,7 @@
 		0A3841A62C353ACB0077B501 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				0A1E9D062C61399300AF918E /* MyCartViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -516,6 +521,7 @@
 		0A3841A72C353AD00077B501 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0A1E9D082C613AC100AF918E /* MyCartModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -890,6 +896,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A331A7A2C2EE0C70063CB1F /* RadioButton.swift in Sources */,
+				0A1E9D072C61399300AF918E /* MyCartViewModel.swift in Sources */,
 				0AE16ED32C585BC7005CFEB6 /* ProductListingViewModel.swift in Sources */,
 				0AE16ED12C585B95005CFEB6 /* ProductListingModel.swift in Sources */,
 				0A94679A2C3BF0D800777FE9 /* RegisterResponseModel.swift in Sources */,
@@ -921,6 +928,7 @@
 				0A331A382C2E9B170063CB1F /* NeoStrore_SwiftUIApp.swift in Sources */,
 				0A331A922C313D050063CB1F /* ProductListCellView.swift in Sources */,
 				0A94679C2C3D138600777FE9 /* LoginResponseModel.swift in Sources */,
+				0A1E9D092C613AC100AF918E /* MyCartModel.swift in Sources */,
 				0A3841BE2C3AC3240077B501 /* AddressListCell.swift in Sources */,
 				0A331A722C2EBB5A0063CB1F /* NeoButton.swift in Sources */,
 			);

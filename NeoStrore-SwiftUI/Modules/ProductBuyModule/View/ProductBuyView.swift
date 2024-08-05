@@ -38,7 +38,12 @@ struct ProductBuyView: View {
             Button{
                 if let quantity = Int(quantity) , let productId = Int(productId){
                     productBuyViewModel.buyProduct(productId: productId, quantity: Int(quantity)) { bool in
-                        print(bool)
+                        switch bool{
+                        case true:
+                            isShowingBuyView = false
+                        case false:
+                            print("")
+                        }
                     }
                 }else{
                     isShowingError = true

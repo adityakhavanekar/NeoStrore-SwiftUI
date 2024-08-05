@@ -8,19 +8,32 @@
 import SwiftUI
 
 struct MyCartView: View {
+    
+    @StateObject var myCartViewModel:MyCartViewModel = MyCartViewModel()
+    
     var body: some View {
         VStack{
-            List(0..<20){order in
-                if order == 19{
-                    HStack{
-                        Spacer()
-                        NeoButton(buttonText: "ORDER NOW", foregroundColor: .white, backgroundColor: .red)
-                        Spacer()
+            if let myCart = myCartViewModel.myCartModel,let count = myCartViewModel.myCartModel?.count{
+                List(0..<count+1){order in
+                    if order == myCart.count{
+                        HStack{
+                            Spacer()
+                            Button{
+                                print("Order Placed")
+                            }label: {
+                                NeoButton(buttonText: "ORDER NOW", foregroundColor: .white, backgroundColor: .red)
+                            }
+                            Spacer()
+                        }
+                    }else{
+                        MyCartListCell(image: myCart.data?[order].product.productImages ?? "MockFurniture", name: myCart.data?[order].product.name ?? "", category: myCart.data?[order].product.productCategory ?? "")
                     }
-                }else{
-                    MyCartListCell()
-                }
-            }.listStyle(.plain)
+                }.listStyle(.plain)
+            }
+        }.onAppear(){
+            myCartViewModel.getMyCartList { bool in
+                print(bool)
+            }
         }
     }
 }

@@ -78,8 +78,8 @@ struct ProductDetailView: View {
                                     .background(Color.red)
                                     .font(.title2)
                             }
-                            NavigationLink(destination: AddressView()) {
-                                Text("Rate")
+                            NavigationLink(destination: MyCartView()) {
+                                Text("GO TO CART")
                                     .foregroundColor(.white)
                                     .fontWeight(.black)
                                     .frame(width: geometry.size.width/2.5,height: 50)
