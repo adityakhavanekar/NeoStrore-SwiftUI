@@ -26,7 +26,7 @@ struct MyCartView: View {
                             Spacer()
                         }
                     }else{
-                        MyCartListCell(image: myCart.data?[order].product.productImages ?? "MockFurniture", name: myCart.data?[order].product.name ?? "", category: myCart.data?[order].product.productCategory ?? "")
+                        MyCartListCell(selectedQuantity:myCart.data?[order].quantity ?? 0,image: myCart.data?[order].product.productImages ?? "MockFurniture", name: myCart.data?[order].product.name ?? "", category: myCart.data?[order].product.productCategory ?? "")
                     }
                 }.listStyle(.plain)
             }

@@ -28,17 +28,45 @@ struct MyCartListCell: View {
                     .font(.system(size: 13))
                     .foregroundColor(.secondary)
                 HStack{
-                    Menu{
-                        Button {
-                            selectedQuantity+=1
-                        } label: {
-                            Text("")
+                    Menu {
+                        Button("1") {
+                            selectedQuantity = 1
                         }
-                    }label: {
-                        Text("\(selectedQuantity)").foregroundColor(.white)
-                            .font(.system(size: 15))
-                    }
-                    Image(systemName: "chevron.down").foregroundColor(.white)
+                        Button("2") {
+                            selectedQuantity = 2
+                        }
+                        Button("3") {
+                            selectedQuantity = 3
+                        }
+                        Button("4") {
+                            selectedQuantity = 4
+                        }
+                        Button("5") {
+                            selectedQuantity = 5
+                        }
+                        Button("6") {
+                            selectedQuantity = 6
+                        }
+                        Button("7") {
+                            selectedQuantity = 7
+                        }
+                        Button("8") {
+                            selectedQuantity = 8
+                        }
+                        Button("9") {
+                            selectedQuantity = 9
+                        }
+                        Button("10") {
+                            selectedQuantity = 10
+                        }
+                    } label: {
+                            HStack {
+                                Text("\(selectedQuantity)")
+                                    .foregroundColor(.white)
+                                Image(systemName: "chevron.down")
+                                    .foregroundColor(.white)
+                            }
+                        }
                 }
                 .padding(7)
                 .background(.secondary)
