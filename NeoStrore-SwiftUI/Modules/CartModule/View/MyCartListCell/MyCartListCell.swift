@@ -14,6 +14,7 @@ struct MyCartListCell: View {
     @State var image:String
     @State var name:String
     @State var category:String
+    var updateQuantity: (Int) -> Void
     
     var body: some View {
         HStack{
@@ -31,33 +32,35 @@ struct MyCartListCell: View {
                     Menu {
                         Button("1") {
                             selectedQuantity = 1
+                            updateQuantity(selectedQuantity)
                         }
                         Button("2") {
                             selectedQuantity = 2
+                            updateQuantity(selectedQuantity)
                         }
                         Button("3") {
                             selectedQuantity = 3
+                            updateQuantity(selectedQuantity)
                         }
                         Button("4") {
                             selectedQuantity = 4
+                            updateQuantity(selectedQuantity)
                         }
                         Button("5") {
                             selectedQuantity = 5
+                            updateQuantity(selectedQuantity)
                         }
                         Button("6") {
                             selectedQuantity = 6
+                            updateQuantity(selectedQuantity)
                         }
                         Button("7") {
                             selectedQuantity = 7
+                            updateQuantity(selectedQuantity)
                         }
                         Button("8") {
                             selectedQuantity = 8
-                        }
-                        Button("9") {
-                            selectedQuantity = 9
-                        }
-                        Button("10") {
-                            selectedQuantity = 10
+                            updateQuantity(selectedQuantity)
                         }
                     } label: {
                             HStack {
@@ -76,5 +79,7 @@ struct MyCartListCell: View {
 }
 
 #Preview {
-    MyCartListCell(image: "", name: "", category: "")
+    MyCartListCell(selectedQuantity: 1, image: "", name: "", category: ""){_ in 
+        
+    }
 }

@@ -26,9 +26,23 @@ struct MyCartView: View {
                             Spacer()
                         }
                     }else{
-                        MyCartListCell(selectedQuantity:myCart.data?[order].quantity ?? 0,image: myCart.data?[order].product.productImages ?? "MockFurniture", name: myCart.data?[order].product.name ?? "", category: myCart.data?[order].product.productCategory ?? "")
+                        MyCartListCell(selectedQuantity: myCartViewModel.myCartModel?.data?[order].quantity ?? 0, image: myCart.data?[order].product.productImages ?? "MockFurniture", name: myCart.data?[order].product.name ?? "", category: myCart.data?[order].product.productCategory ?? ""){ quantity in
+                            print(quantity)
+                            if let productId = myCartViewModel.myCartModel?.data?[order].productID{
+                                myCartViewModel.updateCartProduct(productId: productId, quantity: quantity) { bool in
+                                    switch bool{
+                                    case true:
+                                        print("Item Updated")
+                                    case false:
+                                        print("Item Failed to update")
+                                    }
+                                }
+                            }
+                        }
                     }
                 }.listStyle(.plain)
+            }else{
+                Text("NO ITEMS IN THE CART. START SHOPPING")
             }
         }.onAppear(){
             myCartViewModel.getMyCartList { bool in
