@@ -38,12 +38,8 @@ struct AddressView: View {
                         }
                     }
                     NavigationLink(destination: ProductListingView()) {
-                        NeoButton(buttonText: "SAVE ADDRESS", foregroundColor: .white,backgroundColor: .red)
+                        NeoButton(buttonText: "Place Order", foregroundColor: .white,backgroundColor: .red)
                             .padding()
-                    }
-                    NavigationLink(destination: ProductListingView()) {
-                        NeoButton(buttonText: "GO TO ADDRESSES", foregroundColor: .white,backgroundColor: .red)
-                            .padding(.leading)
                     }
                 }
                 .padding(.leading,20)

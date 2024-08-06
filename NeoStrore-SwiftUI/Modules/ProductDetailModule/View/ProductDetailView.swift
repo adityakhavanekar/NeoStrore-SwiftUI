@@ -78,7 +78,7 @@ struct ProductDetailView: View {
                                     .background(Color.red)
                                     .font(.title2)
                             }
-                            NavigationLink(destination: MyCartView()) {
+                            NavigationLink(destination: MyCartView(totalPrice: "")) {
                                 Text("GO TO CART")
                                     .foregroundColor(.white)
                                     .fontWeight(.black)
