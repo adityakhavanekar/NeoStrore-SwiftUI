@@ -15,6 +15,7 @@ struct AddressView: View {
     @State var state:String = ""
     @State var zipCode:String = ""
     @State var country:String = ""
+    @State var totalPrice:String = "9992"
     
     var body: some View {
         ZStack {
@@ -36,7 +37,11 @@ struct AddressView: View {
                             AddressTextField(header: "ZIP CODE", placeholder: "ZIP CODE", textFieldHeight: 50, address: $zipCode)
                             AddressTextField(header: "COUNTRY", placeholder: "COUNTRY", textFieldHeight: 50, address: $country)
                         }
-                    }
+                    }.padding(.bottom)
+                    TotalCell(totalPrice: $totalPrice)
+                        .padding(10)
+                        .background(Color.white)
+                        .cornerRadius(10)
                     NavigationLink(destination: ProductListingView()) {
                         NeoButton(buttonText: "Place Order", foregroundColor: .white,backgroundColor: .red)
                             .padding()

@@ -42,6 +42,7 @@
 		0A6393672C628F43003062D4 /* OrderNowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6393662C628F43003062D4 /* OrderNowCell.swift */; };
 		0A63936A2C629EB3003062D4 /* TotalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6393692C629EB3003062D4 /* TotalCell.swift */; };
 		0A63936D2C62A504003062D4 /* PlaceOrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A63936C2C62A504003062D4 /* PlaceOrderModel.swift */; };
+		0A63936F2C62C461003062D4 /* PlaceOrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A63936E2C62C461003062D4 /* PlaceOrderViewModel.swift */; };
 		0A73AB402C3ADF310033965F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A73AB3F2C3ADF310033965F /* NetworkManager.swift */; };
 		0A94679A2C3BF0D800777FE9 /* RegisterResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9467992C3BF0D800777FE9 /* RegisterResponseModel.swift */; };
 		0A94679C2C3D138600777FE9 /* LoginResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A94679B2C3D138600777FE9 /* LoginResponseModel.swift */; };
@@ -114,6 +115,7 @@
 		0A6393662C628F43003062D4 /* OrderNowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderNowCell.swift; sourceTree = "<group>"; };
 		0A6393692C629EB3003062D4 /* TotalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalCell.swift; sourceTree = "<group>"; };
 		0A63936C2C62A504003062D4 /* PlaceOrderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceOrderModel.swift; sourceTree = "<group>"; };
+		0A63936E2C62C461003062D4 /* PlaceOrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceOrderViewModel.swift; sourceTree = "<group>"; };
 		0A73AB3F2C3ADF310033965F /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		0A9467992C3BF0D800777FE9 /* RegisterResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterResponseModel.swift; sourceTree = "<group>"; };
 		0A94679B2C3D138600777FE9 /* LoginResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponseModel.swift; sourceTree = "<group>"; };
@@ -567,6 +569,7 @@
 		0A3841B02C35496A0077B501 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				0A63936E2C62C461003062D4 /* PlaceOrderViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -959,6 +962,7 @@
 				0A3841B52C3A9FCC0077B501 /* AddressTextFields.swift in Sources */,
 				0A331A382C2E9B170063CB1F /* NeoStrore_SwiftUIApp.swift in Sources */,
 				0A331A922C313D050063CB1F /* ProductListCellView.swift in Sources */,
+				0A63936F2C62C461003062D4 /* PlaceOrderViewModel.swift in Sources */,
 				0A94679C2C3D138600777FE9 /* LoginResponseModel.swift in Sources */,
 				0A1E9D092C613AC100AF918E /* MyCartModel.swift in Sources */,
 				0A3841BE2C3AC3240077B501 /* AddressListCell.swift in Sources */,

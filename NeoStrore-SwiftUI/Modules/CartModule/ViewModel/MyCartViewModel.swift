@@ -34,6 +34,7 @@ final class MyCartViewModel:ObservableObject{
                     }
                 case .failure(_):
                     print("Failure")
+                    completion(false)
                 }
             }
         }else{}
